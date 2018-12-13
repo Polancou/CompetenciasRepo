@@ -83,6 +83,7 @@
                         <label for="descripcion">Descripción</label>
                     </div>
                     <a class="btn" onclick="save()" >Agregar Competencia</a>
+                    <a class="btn" href="{{ route('pdf',['id' => $subject->id]) }}" >Descargar</a>
 
                 </div>
 

@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Wed, 12 Dec 2018 17:05:27 +0000.
+ * Date: Thu, 13 Dec 2018 01:28:14 +0000.
  */
 
 namespace App\Models;
@@ -13,10 +13,17 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * Class Performance
  * 
  * @property int $id
- * @property string $nivel
- * @property string $indicador
- * @property string $valoracion
  * @property int $competencia
+ * @property string $excelente
+ * @property int $valorex
+ * @property string $notable
+ * @property int $valornot
+ * @property string $bueno
+ * @property int $valorb
+ * @property string $suficiente
+ * @property int $valorsuf
+ * @property string $insuficiente
+ * @property int $valorinsuf
  * 
  * @property \App\Models\Competition $competition
  *
@@ -27,14 +34,26 @@ class Performance extends Eloquent
 	public $timestamps = false;
 
 	protected $casts = [
-		'competencia' => 'int'
+		'competencia' => 'int',
+		'valorex' => 'int',
+		'valornot' => 'int',
+		'valorb' => 'int',
+		'valorsuf' => 'int',
+		'valorinsuf' => 'int'
 	];
 
 	protected $fillable = [
-		'nivel',
-		'indicador',
-		'valoracion',
-		'competencia'
+		'competencia',
+		'excelente',
+		'valorex',
+		'notable',
+		'valornot',
+		'bueno',
+		'valorb',
+		'suficiente',
+		'valorsuf',
+		'insuficiente',
+		'valorinsuf'
 	];
 
 	public function competition()

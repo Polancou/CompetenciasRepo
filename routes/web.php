@@ -19,8 +19,8 @@ Route::get('/', function (){
     return view('inicio');
 })->name('inicio');
 
-Route::get('/pdf','AdministratorController@autogeneratePDF')->name('pdf');
-Route::post('/pdf','AdministratorController@autogeneratePDF')->name('pdf');
+Route::get('/pdf{id}','AdministratorController@autogeneratePDF')->name('pdf');
+Route::post('/pdf{id}','AdministratorController@autogeneratePDF')->name('pdf');
 
 Route::get('/cuatro','AdministratorController@vistacuatro')->name('vercuatro');
 Route::post('/cuatro','AdministratorController@vistacuatro')->name('vercuatro');
@@ -45,6 +45,15 @@ Route::post('/addtema','AdministratorController@addtema')->name('addtema');
 
 Route::get('/addindicador','AdministratorController@addindicador')->name('addindicador');
 Route::post('/addindicador','AdministratorController@addindicador')->name('addindicador');
+
+Route::get('/addniveles','AdministratorController@addniveles')->name('addniveles');
+Route::post('/addniveles','AdministratorController@addniveles')->name('addniveles');
+
+Route::get('/addevidencia','AdministratorController@addevidencia')->name('addevidencia');
+Route::post('/addevidencia','AdministratorController@addevidencia')->name('addevidencia');
+
+Route::get('/addnews','AdministratorController@addnews')->name('addnews');
+Route::post('/addnews','AdministratorController@addnews')->name('addnews');
 
 
 Auth::routes();

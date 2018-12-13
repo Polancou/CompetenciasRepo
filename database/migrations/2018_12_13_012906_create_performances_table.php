@@ -15,10 +15,17 @@ class CreatePerformancesTable extends Migration {
 		Schema::create('performances', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->string('nivel')->nullable();
-			$table->string('indicador')->nullable();
-			$table->string('valoracion')->nullable();
 			$table->integer('competencia')->index('performances_competitions_id_fk');
+			$table->string('excelente')->nullable();
+			$table->integer('valorex')->nullable();
+			$table->string('notable')->nullable();
+			$table->integer('valornot')->nullable();
+			$table->string('bueno')->nullable();
+			$table->integer('valorb')->nullable();
+			$table->string('suficiente')->nullable();
+			$table->integer('valorsuf')->nullable();
+			$table->string('insuficiente')->nullable();
+			$table->integer('valorinsuf')->nullable();
 		});
 	}
 

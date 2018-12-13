@@ -10,33 +10,33 @@ namespace App\Models;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Indicator
+ * Class News
  * 
  * @property int $id
- * @property int $competencia
- * @property string $indicador
- * @property string $valor
+ * @property int $competencias
+ * @property string $fuentes
+ * @property string $apoyos
  * 
  * @property \App\Models\Competition $competition
  *
  * @package App\Models
  */
-class Indicator extends Eloquent
+class News extends Eloquent
 {
 	public $timestamps = false;
 
 	protected $casts = [
-		'competencia' => 'int'
+		'competencias' => 'int'
 	];
 
 	protected $fillable = [
-		'competencia',
-		'indicador',
-		'valor'
+		'competencias',
+		'fuentes',
+		'apoyos'
 	];
 
 	public function competition()
 	{
-		return $this->belongsTo(\App\Models\Competition::class, 'competencia');
+		return $this->belongsTo(\App\Models\Competition::class, 'competencias');
 	}
 }

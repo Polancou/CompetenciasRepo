@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Wed, 12 Dec 2018 17:05:27 +0000.
+ * Date: Thu, 13 Dec 2018 01:28:14 +0000.
  */
 
 namespace App\Models;
@@ -20,6 +20,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property \App\Models\Subject $subject
  * @property \Illuminate\Database\Eloquent\Collection $evaluations
  * @property \Illuminate\Database\Eloquent\Collection $indicators
+ * @property \Illuminate\Database\Eloquent\Collection $news
  * @property \Illuminate\Database\Eloquent\Collection $performances
  * @property \Illuminate\Database\Eloquent\Collection $topics
  *
@@ -53,6 +54,11 @@ class Competition extends Eloquent
 	public function indicators()
 	{
 		return $this->hasMany(\App\Models\Indicator::class, 'competencia');
+	}
+
+	public function news()
+	{
+		return $this->hasMany(\App\Models\News::class, 'competencias');
 	}
 
 	public function performances()
