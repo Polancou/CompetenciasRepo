@@ -162,6 +162,7 @@
                         @endforeach
 
                     @endforeach
+                <b>Creado: {{ $fecha }} </b>
             </div>
         </div>
 

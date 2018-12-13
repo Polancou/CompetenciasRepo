@@ -10,6 +10,7 @@ use App\Models\Performance;
 use App\Models\Subject;
 use App\Models\Competition;
 use App\Models\Topic;
+use Carbon\Carbon;
 use Dompdf\Dompdf;
 use Dompdf\Options;
 use Illuminate\Http\Request;
@@ -246,14 +247,28 @@ class AdministratorController extends Controller
         $id = $request->id;
         $subject = (new Subject)->where('id','=',$id)->first();
         $competitions = (new Competition)->where('asignatura','=',$id)->get();
-
+        $fecha = Carbon::now();
 
         $options = new Options();
         $options->setIsRemoteEnabled(true);
         $dompdf = new Dompdf($options);
         $dompdf->setPaper('A4','landscape');
-        $dompdf->loadHtml(view('pdf.plantilla')->with(compact('subject'))->with(compact('competitions'))->render());
+        $dompdf->loadHtml(view('pdf.plantilla')->with(compact('subject'))->with(compact('competitions'))->with
+        (compact('fecha'))
+            ->render());
         $dompdf->render();
         $dompdf->stream('nombre',array('Attachment'=>true));
+    }
+
+    public function asignaturas(Request $request){
+        $subjects = (new Subject)->get();
+        return view('ajax.asignaturas')->with(compact('subjects'));
+    }
+
+    public function detalleasignatura(Request $request){
+        $id = $request->id;
+        $subject = (new Subject)->where('id','=',$id)->first();
+        $competitions = (new \App\Models\Competition)->where('asignatura', '=', $id)->get();
+        return view('comp')->with(compact('subject'))->with(compact('competitions'));
     }
 }

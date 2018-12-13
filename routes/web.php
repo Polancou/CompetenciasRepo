@@ -25,6 +25,12 @@ Route::post('/pdf{id}','AdministratorController@autogeneratePDF')->name('pdf');
 Route::get('/cuatro','AdministratorController@vistacuatro')->name('vercuatro');
 Route::post('/cuatro','AdministratorController@vistacuatro')->name('vercuatro');
 
+Route::get('/asignaturas','AdministratorController@asignaturas')->name('asignaturas');
+Route::post('/asignaturas','AdministratorController@asignaturas')->name('asignaturas');
+
+Route::get('/detalleasignatura{id}','AdministratorController@detalleasignatura')->name('detalleasignatura');
+Route::post('/detalleasignatura{id}','AdministratorController@detalleasignatura')->name('detalleasignatura');
+
 Route::get('/temas','AdministratorController@vistatemas')->name('vertemas');
 Route::post('/temas','AdministratorController@vistatemas')->name('vertemas');
 

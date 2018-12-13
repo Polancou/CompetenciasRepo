@@ -21,6 +21,9 @@
                         </blockquote>
                     </div>
                 </div>
+                <a class="btn" href="{{ route('asignaturas') }}">Ver asignaturas</a>
+                <a class="btn red" href="{{ route('inicio') }}">Nueva asignatura</a>
+
                 <div style="margin: auto; ">
 
                     <div class="card col s12 m12" >
