@@ -194,7 +194,7 @@
                                                 <label for="excelente">Indicador de alcance</label>
                                             </div>
                                             <div class="input-field col s12 m6">
-                                                <input type="text" id="valoracionex" name="valoracionex">
+                                                <input type="number" id="valoracionex" name="valoracionex">
                                                 <label for="valoracionex">Valoración numérica</label>
                                             </div>
                                         </div>
@@ -205,7 +205,7 @@
                                                 <label for="notable">Indicador de alcance</label>
                                             </div>
                                             <div class="input-field col s12 m6">
-                                                <input type="text" id="valoracionnot" name="valoracionnot">
+                                                <input type="number" id="valoracionnot" name="valoracionnot">
                                                 <label for="valoracionnot">Valoración numérica</label>
                                             </div>
                                         </div>
@@ -216,7 +216,7 @@
                                                 <label for="bueno">Indicador de alcance</label>
                                             </div>
                                             <div class="input-field col s12 m6">
-                                                <input type="text" id="valoracionb" name="valoracionb">
+                                                <input type="number" id="valoracionb" name="valoracionb">
                                                 <label for="valoracionb">Valoración numérica</label>
                                             </div>
                                         </div>
@@ -227,7 +227,7 @@
                                                 <label for="suficiente">Indicador de alcance</label>
                                             </div>
                                             <div class="input-field col s12 m6">
-                                                <input type="text" id="valoracionsuf" name="valoracionsuf">
+                                                <input type="number" id="valoracionsuf" name="valoracionsuf">
                                                 <label for="valoracionsuf">Valoración numérica</label>
                                             </div>
                                         </div>
@@ -238,7 +238,7 @@
                                                 <label for="insuficiente">Indicador de alcance</label>
                                             </div>
                                             <div class="input-field col s12 m6">
-                                                <input type="text" id="valoracioninsuf" name="valoracioninsuf">
+                                                <input type="number" id="valoracioninsuf" name="valoracioninsuf">
                                                 <label for="valoracioninsuf">Valoración numérica</label>
                                             </div>
                                         </div>
@@ -303,27 +303,27 @@
                                               <h6>Indicadores de alcance</h6>
                                               <div class="row">
                                                   <div class="input-field col s12 m6">
-                                                      <input type="text" id="indiceA" name="indiceA">
+                                                      <input type="number" id="indiceA" name="indiceA">
                                                       <label for="indiceA">A</label>
                                                   </div>
                                                   <div class="input-field col s12 m6">
-                                                      <input type="text" id="indiceB" name="indiceB">
+                                                      <input type="number" id="indiceB" name="indiceB">
                                                       <label for="indiceB">B</label>
                                                   </div>
                                                   <div class="input-field col s12 m6">
-                                                      <input type="text" id="indiceC" name="indiceC">
+                                                      <input type="number" id="indiceC" name="indiceC">
                                                       <label for="indiceC">C</label>
                                                   </div>
                                                   <div class="input-field col s12 m6">
-                                                      <input type="text" id="indiceD" name="indiceD">
+                                                      <input type="number" id="indiceD" name="indiceD">
                                                       <label for="indiceD">D</label>
                                                   </div>
                                                   <div class="input-field col s12 m6">
-                                                      <input type="text" id="indiceE" name="indiceE">
+                                                      <input type="number" id="indiceE" name="indiceE">
                                                       <label for="indiceE">E</label>
                                                   </div>
                                                   <div class="input-field col s12 m6">
-                                                      <input type="text" id="indiceF" name="indiceF">
+                                                      <input type="number" id="indiceF" name="indiceF">
                                                       <label for="indiceF">F</label>
                                                   </div>
                                               </div>
